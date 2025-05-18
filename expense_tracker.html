@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="expense_tracker.css">
+</head>
+
+<body>
+    <div class="full_body">
+        <div class="title">Expense Tracker</div>
+        <div class="container">
+            <div class="expenses">
+                <a href="#" class="buttons" onClick="add_expense_page()">Add Expense</a>
+                <br>
+                <div class="sub-title">Expenses</div>
+                <table class="expense-table">
+                    <tr>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Note</th>
+                    </tr>
+                </table>
+
+                <form action="#" class="add-new-expense">
+                    <span>
+                        <label for="amount">Amount:</label>
+                        <input type="text" class="form-input" name="amount" placeholder="How much?">
+                    </span>
+
+                    <span>
+                        <label for="category">Category:</label>
+                        <select name="category" id="category">
+                            <option value="Food">Food</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Groceries">Groceries</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </span>
+
+                    <span>
+                        <label for="date">Date:</label>
+                        <input type="date" class="form-input" name="date">
+                    </span>
+
+                    <span>
+                        <label for="note">Note:</label>
+                        <input type="text" class="form-input" name="note" placeholder="What did you spend on?">
+                    </span>
+
+                    <span>
+                        <a href="#" class="buttons small" onClick="add_expense()">Submit</a>
+                    </span>
+                </form>
+            </div>
+
+            <div class="category">
+                <a href="#" class="buttons" onClick="add_category_page()">Add Category</a>
+                <br>
+                <div class="sub-title">Categories</div>
+                <div class="available-categories">
+                    <span>Food <span class="sum"></span></span>
+                    <span>Travel <span class="sum"></span></span>
+                    <span>Groceries <span class="sum"></span></span>
+                    <span>Entertainment <span class="sum"></span></span>
+                    <span>Others <span class="sum"></span></span>
+                </div>
+
+                <form action="#" class="add-category">
+                    <span>
+                        <label for="new-category">Category Name:</label>
+                        <input type="text" class="form-input" name="new-category" placeholder="Enter category name">
+                    </span>
+
+                    <span>
+                        <a href="#" class="buttons small" onClick="add_category()">Submit</a>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="expense_tracker.js"></script>
+</body>
+
+</html>
